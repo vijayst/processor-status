@@ -1,9 +1,10 @@
 import './App.css';
+import LoadData from './LoadData';
 
 function App() {
   return (
     <div className="app">
-      <button className="button">Load Data</button>
+      <LoadData />
     </div>
   );
 }

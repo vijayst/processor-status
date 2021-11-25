@@ -2,13 +2,12 @@
 
 ## Tasks
 
-- Populate firestore (60)
-- Query with pagination (10)
+- Populate firestore (120)
+- Query (10)
 - Display timeline (30)
 - Display squares (60)
 - Display colors (30)
 - Animation (60)
-- Virtualisation (120)
 
 ## Data structure
 
