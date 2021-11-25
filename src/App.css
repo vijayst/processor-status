@@ -30,3 +30,18 @@
 .button:active {
   background-color: #ffd93b;
 }
+
+.button:disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+
+.load-data {
+  display: flex;
+  align-items: center;
+}
+
+.load-data__warning {
+  color: red;
+  margin-left: 1rem;
+}
