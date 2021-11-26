@@ -1,3 +1,8 @@
 .chart {
   display: flex;
 }
+
+.chart rect {
+  transition: all 0.3s ease-in-out;
+  transition-property: opacity, fill;
+}
