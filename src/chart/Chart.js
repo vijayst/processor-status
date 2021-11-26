@@ -3,6 +3,7 @@ import Processors from './Processors';
 import SquareArea from './SquareArea';
 import { db } from '../utils/firebase';
 import { collection, getDocs } from 'firebase/firestore';
+import './chart.css';
 
 export default function Chart() {
   const [data, setData] = useState([]);
@@ -20,7 +21,7 @@ export default function Chart() {
   return (
     <div className="chart">
       <Processors data={data} />
-      <SquareArea />
+      <SquareArea data={data} />
     </div>
   );
 }
