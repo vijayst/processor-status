@@ -3,8 +3,10 @@
 }
 
 .processors__item {
+  box-sizing: border-box;
   height: 24px;
   width: 10rem;
   font-size: 12px;
+  line-height: 1;
   padding: 6px 0;
 }
