@@ -2,7 +2,18 @@ import React, { useState } from 'react';
 import { db } from './utils/firebase';
 import { collection, addDoc, getDocs, deleteDoc } from 'firebase/firestore';
 
-const processors = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+const processors = [
+  'Processor A',
+  'Processor B',
+  'Processor C',
+  'Processor D',
+  'Processor E',
+  'Processor F',
+  'Processor G',
+  'Processor H',
+  'Processor I',
+  'Processor J'
+];
 
 function randomise(max, cutoff) {
   let randomNumber = Math.random() * max;

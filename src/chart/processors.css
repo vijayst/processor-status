@@ -1,0 +1,10 @@
+.processors {
+  padding-top: 40px;
+}
+
+.processors__item {
+  height: 24px;
+  width: 10rem;
+  font-size: 12px;
+  padding: 6px 0;
+}
