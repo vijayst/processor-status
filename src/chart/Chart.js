@@ -18,10 +18,10 @@ export default function Chart() {
     });
   }, []);
 
-  return (
+  return data.length > 0 ? (
     <div className="chart">
       <Processors data={data} />
       <SquareArea data={data} />
     </div>
-  );
+  ) : null;
 }

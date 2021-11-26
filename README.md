@@ -1,10 +1,20 @@
 # Processor Status
 
+## Getting started
+
+- Clone the repository
+- Run yarn or npm install
+- Run yarn start or npm start to run locally
+- Run yarn build or npm run build to make a build
+- Run yarn deploy or npm run deploy to deploy to firebase hosting
+
+The app is hosted in [https://processor-status.web.app](https://processor-status.web.app)
+
 ## Tasks
 
 - Populate firestore
 - Query (10)
-- Display timeline (30)
+- Display timeline
 - Display squares (60)
 - Display colors (30)
 - Animation (60)
@@ -20,7 +30,7 @@
   - infoCount (random between 0 - 100)
   - processorId
 
-## Color decision
+## Color of square
 
 Display one color based on order of precedence: error, warning, success, info
 
