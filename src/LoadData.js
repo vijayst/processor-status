@@ -41,25 +41,30 @@ export default function LoadData() {
       promises.push(deleteDoc(doc.ref));
     });
     await Promise.all(promises);
-    processors.forEach(async (processorName) => {
-      const docRef = await addDoc(collection(db, 'processors'), {
-        name: processorName
-      });
-      promises = [];
-      for (let tick = 1; tick <= 100; tick++) {
-        promises.push(
-          addDoc(collection(db, 'eventSummary'), {
-            tick,
-            processorId: docRef.id,
-            errorCount: randomise(100, 95),
-            warningCount: randomise(100, 80),
-            successCount: randomise(20, 15),
-            infoCount: randomise(150, 50)
-          })
-        );
-      }
-      await Promise.all(promises);
+    const processorPromises = [];
+    processors.forEach((processorName) => {
+      processorPromises.push(
+        addDoc(collection(db, 'processors'), {
+          name: processorName
+        }).then((docRef) => {
+          const eventPromises = [];
+          for (let tick = 1; tick <= 100; tick++) {
+            eventPromises.push(
+              addDoc(collection(db, 'eventSummary'), {
+                tick,
+                processorId: docRef.id,
+                errorCount: randomise(100, 95),
+                warningCount: randomise(100, 80),
+                successCount: randomise(20, 15),
+                infoCount: randomise(150, 50)
+              })
+            );
+          }
+          return Promise.all(eventPromises);
+        })
+      );
     });
+    await Promise.all(processorPromises);
     setLoading(false);
     setTime(0);
     clearInterval(handle);
