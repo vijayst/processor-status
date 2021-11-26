@@ -48,7 +48,7 @@ export default function LoadData() {
           name: processorName
         }).then((docRef) => {
           const eventPromises = [];
-          for (let tick = 1; tick <= 100; tick++) {
+          for (let tick = 1; tick <= 50; tick++) {
             eventPromises.push(
               addDoc(collection(db, 'eventSummary'), {
                 tick,
