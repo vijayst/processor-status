@@ -3,7 +3,7 @@ import React from 'react';
 const FONT_SIZE = 10;
 const TICK_COUNT = 5;
 
-export default function Timeline({ width, squareWidth, squareCount, height }) {
+export default function Timeline({ width, squareWidth, squareCount }) {
   const tickTexts = [];
   for (let index = 0; index < squareCount; index += TICK_COUNT) {
     tickTexts.push({

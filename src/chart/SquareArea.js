@@ -10,12 +10,7 @@ export default function SquareArea({ data }) {
   const height = TIMELINE_HEIGHT + WIDTH * data.length;
   return (
     <svg width={width} height={height}>
-      <Timeline
-        width={width}
-        height={TIMELINE_HEIGHT}
-        squareCount={MAX_SQUARES}
-        squareWidth={WIDTH}
-      />
+      <Timeline width={width} squareCount={MAX_SQUARES} squareWidth={WIDTH} />
     </svg>
   );
 }
