@@ -13,11 +13,11 @@ The app is hosted in [https://processor-status.web.app](https://processor-status
 ## Tasks
 
 - Populate firestore
-- Query (10)
+- Query
 - Display timeline
-- Display squares (60)
-- Display colors (30)
-- Animation (60)
+- Display squares
+- Display colors
+- Animation
 
 ## Data structure
 
