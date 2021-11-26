@@ -5,9 +5,19 @@ import { db } from '../utils/firebase';
 import { collection, query, where, orderBy, getDocs } from 'firebase/firestore';
 import './chart.css';
 
-export default function Chart() {
+export default function Chart({ refreshKey }) {
   const [data, setData] = useState([]);
   useEffect(() => {
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    if (refreshKey) {
+      fetchData();
+    }
+  }, [refreshKey]);
+
+  function fetchData() {
     const data = [];
     const processorQuery = query(collection(db, 'processors'), orderBy('name'));
     const querySnapshotPromise = getDocs(processorQuery);
@@ -40,7 +50,7 @@ export default function Chart() {
       .then(() => {
         setData(data);
       });
-  }, []);
+  }
 
   return data.length > 0 ? (
     <div className="chart">

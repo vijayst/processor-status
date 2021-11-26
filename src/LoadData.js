@@ -22,7 +22,7 @@ function randomise(max, cutoff) {
   return Math.ceil(randomNumber);
 }
 
-export default function LoadData() {
+export default function LoadData({ setRefreshKey }) {
   const [loading, setLoading] = useState(false);
   const [time, setTime] = useState(0);
 
@@ -68,6 +68,7 @@ export default function LoadData() {
     setLoading(false);
     setTime(0);
     clearInterval(handle);
+    setRefreshKey(Date.now().toString());
   }
 
   return (
