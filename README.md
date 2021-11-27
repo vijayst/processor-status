@@ -12,7 +12,7 @@ The app is hosted in [https://processor-status.web.app](https://processor-status
 
 ![Screenshot](screenshot.png)
 
-The app shows the processor status by time. Clicking on the "Load Data" button to generate some random data in the firestore database.
+The app shows the processor status by time. Click on the "Load Data" button to generate some random data in the firestore database.
 
 ## Tasks
 
