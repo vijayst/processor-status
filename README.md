@@ -21,7 +21,6 @@ The app shows the processor status by time. Click on the "Load Data" button to g
 - Display timeline
 - Display squares
 - Display colors
-- Animation
 
 ## Data structure
 
